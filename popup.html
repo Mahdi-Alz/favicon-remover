@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Favicon Remover</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <section class="current">
+    <div class="info">
+      <div class="host" id="currentHost">—</div>
+      <div class="status" id="status"></div>
+    </div>
+    <button id="toggle" type="button" disabled>Hide favicon</button>
+  </section>
+
+  <form id="addForm" class="add">
+    <input id="addInput" type="text" placeholder="Add a site, e.g. example.com" autocomplete="off" spellcheck="false">
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="list-head">
+    <h2>Hidden on</h2>
+    <button id="searchToggle" class="icon-btn" type="button" aria-label="Search hidden sites" aria-expanded="false">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    </button>
+  </div>
+  <input id="searchInput" class="search" type="search" placeholder="Search hidden sites" autocomplete="off" spellcheck="false" hidden>
+  <ul id="list"></ul>
+  <p id="empty" class="empty">No sites yet.</p>
+
+  <script src="shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
